@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: company-registry
+  datasource:
+    url: jdbc:postgres://localhost:5432/tech_test_db
+    username: tech_test_user
+    password: tech_test_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    database: POSTGRESQL
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+server:
+  servlet:
+    context-path: /company-registry
+
+management:
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true

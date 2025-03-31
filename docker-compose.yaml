@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    name: tech_task_db
+    restart: always
+    environment:
+      POSTGRES_DB: tech_task_db
+      POSTGRES_USER: tech_task_user
+      POSTGRES_PASSWORD: tech_task_password
+    ports:
+      - "5432:5432"
